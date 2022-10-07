@@ -8,4 +8,6 @@ public interface RLRPlugin {
     void setLimitReached(boolean limitReached);
 
     void setDebug(boolean debug);
+
+    void reload();
 }
