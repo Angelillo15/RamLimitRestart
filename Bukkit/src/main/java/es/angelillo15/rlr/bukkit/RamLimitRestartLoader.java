@@ -8,6 +8,7 @@ public class RamLimitRestartLoader extends RamLimitRestart {
         super.onEnable();
         new ConfigLoader(getInstance()).loadConfig();
         setupLogger();
+        setupScheduler();
     }
 
     @Override

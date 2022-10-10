@@ -2,6 +2,7 @@ package es.angelillo15.rlr.bukkit.config;
 
 import es.angelillo15.configmanager.ConfigManager;
 import es.angelillo15.rlr.bukkit.RamLimitRestart;
+import org.simpleyaml.configuration.file.YamlFile;
 
 public class ConfigLoader {
     private static RamLimitRestart plugin;
@@ -22,5 +23,9 @@ public class ConfigLoader {
 
     public static void reload(){
         config.registerConfig();
+    }
+
+    public static YamlFile getConfig() {
+        return config.getConfig();
     }
 }

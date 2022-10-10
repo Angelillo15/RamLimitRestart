@@ -19,13 +19,11 @@ Config:
   # The ram free limit in MB
   # When the ram free limit is reached, the server will restart
   limit: 1024 # 1GB -> 1024MB you can calculate doing XGB * 1024 = the limit in MB
-  # The time in seconds to wait before run the command/s
-  # This is useful if you have a plugin that saves the world before the server stops
-  time: 10 # in seconds
   # The command/s to run when the ram limit is reached
   commands:
     - "bc Ram limit reached, restarting the server..."
     - "restart"
+  check-interval: 5 # in seconds
   debug: false # Enable debug mode
 
   # Pterodactyl configuration section
@@ -39,4 +37,9 @@ Config:
     # Your panel API key
     # You can find it in your panel profile https://panel.example.com/account/api
     api-key: "your-api-key"
+Messages:
+  # This message will be sent to the console when the debug mode is enabled
+  debug-message: "&7[&bRamLimitRestart&7] Memory in usage: %memory_usage%, Memory free: %memory_free%, Memory limit: %memory_max%"
+
+
 
