@@ -27,7 +27,6 @@ public class RamLimitRestart extends JavaPlugin implements RLRPlugin  {
         }
     }
 
-    @SuppressWarnings("deprecation")
     public void setupScheduler(){
         Bukkit.getScheduler().scheduleAsyncRepeatingTask(this, () -> {
             double memoryInUsage = Queries.getUsageMemory();

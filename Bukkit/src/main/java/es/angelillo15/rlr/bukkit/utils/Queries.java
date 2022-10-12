@@ -12,7 +12,6 @@ public class Queries {
     public static long getUsageMemory() {
         String panel = ConfigLoader.getConfig().getString("Config.pterodactyl.panel-url");
         String serverUUID = ConfigLoader.getConfig().getString("Config.pterodactyl.serverUUID");
-        Unirest.setTimeouts(0, 0);
         try {
             HttpResponse<String> response = Unirest.get((panel+"api/client/servers/{uuid}/resources").replace("{uuid}", serverUUID))
                     .header("Authorization", "Bearer " + ConfigLoader.getConfig().getString("Config.pterodactyl.api-key"))

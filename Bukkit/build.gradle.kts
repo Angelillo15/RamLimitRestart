@@ -26,3 +26,7 @@ tasks.processResources {
         expand("version" to (parent?.version ?: project.version))
     }
 }
+
+java {
+    withJavadocJar()
+}
