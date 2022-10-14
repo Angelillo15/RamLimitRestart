@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("com.github.johnrengelman.shadow") version "4.0.4"
 }
 
 group = "es.angelillo15.rlr.bukkit"
@@ -23,7 +24,7 @@ dependencies {
 
 tasks.processResources {
     filesMatching("plugin.yml") {
-        expand("version" to (parent?.version ?: project.version))
+        expand("pluginVersion" to (parent?.version ?: project.version))
     }
 }
 

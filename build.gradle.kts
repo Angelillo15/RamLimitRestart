@@ -5,7 +5,6 @@ plugins {
 
 group = "es.angelillo15"
 version = "2.1"
-
 tasks.shadowJar {
     archiveFileName.set("RamLimitRestart.jar")
     relocate("org.simpleyaml", "es.angelillo15.minearte.libs.simpleyaml")

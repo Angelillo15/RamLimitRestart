@@ -1,15 +1,15 @@
 main: es.angelillo15.rlr.bukkit.RamLimitRestartLoader
 name: RamLimitRestart
-version: ${version}
+version: ${pluginVersion}
 author: Angelillo15
 description: Restart the server when the ram limit is reached
 website: https://angelillo15.es
 commands:
   rlr:
-      description: RamLimitRestart commands
-      usage: /rlr <reload|version>
-      aliases: [ramlimitrestart]
-      permission: rlr.command
-      permission-message: "&cYou don't have permission to execute this command"
-      default: false
-      op: true
+    description: RamLimitRestart commands
+    usage: /rlr <reload|version>
+    aliases: [ramlimitrestart]
+    permission: rlr.command
+    permission-message: "&cYou don't have permission to execute this command"
+    default: false
+    op: true
