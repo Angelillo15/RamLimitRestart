@@ -11,6 +11,11 @@ tasks.shadowJar {
     relocate("org.yaml", "es.angelillo15.minearte.libs.yaml")
     relocate("es.angelillo15.configmanager", "es.angelillo15.minearte.libs.config.manager")
     relocate("es.angelillo15.minearte", "es.angelillo15.minearte.libs.minearte")
+    relocate("com.google.gson", "es.angelillo15.minearte.libs.google.gson")
+    relocate("com.mashape.unirest", "es.angelillo15.minearte.libs.mashape.unirest")
+    relocate("org", "es.angelillo15.minearte.libs.org")
+    relocate("net.sf", "es.angelillo15.minearte.libs.net.sf")
+    relocate("mozilla", "es.angelillo15.minearte.libs.mozilla")
 }
 
 repositories {
