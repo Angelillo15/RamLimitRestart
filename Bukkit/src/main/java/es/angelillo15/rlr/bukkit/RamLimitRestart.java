@@ -57,10 +57,13 @@ public class RamLimitRestart extends JavaPlugin implements RLRPlugin  {
         AutoUpdater updater = new AutoUpdater(98166);
         updater.checkForUpdates();
         if(updater.hasUpdate()){
-            RamLimitRestart.getPluginLogger().info(ChatColor.translateAlternateColorCodes('&', ConfigLoader.getConfig().getString("Messages.update-message"))
-                    .replace("%current_version%", updater.getCurrentVersion())
-                    .replace("%new_version%", updater.getSpigotVersion())
+            RamLimitRestart.getPluginLogger().info(ChatColor.translateAlternateColorCodes('&',
+                    "&cThere is a new version of RamLimitRestart available!")
             );
+            RamLimitRestart.getPluginLogger().info(ChatColor.translateAlternateColorCodes('&',
+                    "&6Download it: https://www.spigotmc.org/resources/ramlimitrestart.98166/")
+            );
+
         }
     }
 
