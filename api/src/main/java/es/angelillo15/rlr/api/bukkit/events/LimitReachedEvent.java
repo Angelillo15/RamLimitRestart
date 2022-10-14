@@ -10,9 +10,13 @@ import org.bukkit.event.HandlerList;
  * it's just a event to notify that the limit has been reached
  */
 public class LimitReachedEvent extends Event {
-    private final HandlerList handlers = new HandlerList();
+    private static final HandlerList HANDLERS = new HandlerList();
     @Override
     public HandlerList getHandlers() {
-        return handlers;
+        return HANDLERS;
+    }
+
+    public static HandlerList getHandlerList() {
+        return HANDLERS;
     }
 }

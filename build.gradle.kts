@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "es.angelillo15"
-version = "1.0"
+version = "1.5"
 
 tasks.shadowJar {
     archiveFileName.set("RamLimitRestart.jar")

@@ -3,7 +3,9 @@ package es.angelillo15.rlr.bukkit;
 import es.angelillo15.rlr.api.ILogger;
 import es.angelillo15.rlr.api.RLRPlugin;
 import es.angelillo15.rlr.api.bukkit.events.LimitReachedEvent;
+import es.angelillo15.rlr.bukkit.commands.MainCommand;
 import es.angelillo15.rlr.bukkit.config.ConfigLoader;
+import es.angelillo15.rlr.bukkit.listener.LimitListener;
 import es.angelillo15.rlr.bukkit.utils.Queries;
 import es.angelillo15.rlr.bukkit.utils.logger.RDebugLogger;
 import es.angelillo15.rlr.bukkit.utils.logger.RLogger;
@@ -36,8 +38,9 @@ public class RamLimitRestart extends JavaPlugin implements RLRPlugin  {
             if(memoryInUsage >= maxMemory - limit){
                 if(!limitReached){
                     limitReached = true;
-                    Bukkit.getPluginManager().callEvent(new LimitReachedEvent());
-
+                    Bukkit.getScheduler().scheduleSyncDelayedTask(this, () -> {
+                        Bukkit.getPluginManager().callEvent(new LimitReachedEvent());
+                    }, 0L);
                 }
             }
 
@@ -49,14 +52,17 @@ public class RamLimitRestart extends JavaPlugin implements RLRPlugin  {
         }, 0L, getConfig().getLong("Config.check-interval") * 20L);
     }
 
-    @Override
-    public void onEnable() {
-        instance = this;
+    public void registerCommands(){
+        this.getCommand("rlr").setExecutor(new MainCommand());
+    }
+
+    public void registerListners(){
+        Bukkit.getPluginManager().registerEvents(new LimitListener(), this);
     }
 
     @Override
-    public void onDisable() {
-        task.cancel();
+    public void onEnable() {
+        instance = this;
     }
 
     public static RamLimitRestart getInstance() {

@@ -21,6 +21,9 @@ public class CommandOnLimitReachedEvent extends Event implements Cancellable {
         this.command = command;
     }
 
+    public static HandlerList getHandlerList() {
+        return HANDLERS;
+    }
 
     @Override
     public boolean isCancelled() {
