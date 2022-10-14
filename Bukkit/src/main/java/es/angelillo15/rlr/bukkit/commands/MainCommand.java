@@ -24,9 +24,15 @@ public class MainCommand implements CommandExecutor {
                     sender.sendMessage("§cYou don't have permission to do that!");
                 }
                 return true;
-            } else {
-                return false;
+            } else if (args[0].equalsIgnoreCase("help")) {
+                sender.sendMessage("§aRamLimitRestart v1.0 by Angelillo15");
+                sender.sendMessage("§a/rlr reload - Reloads the config");
+                sender.sendMessage("§a/rlr help - Shows this message");
+                return true;
             }
+
+        } else {
+            return false;
         }
         return false;
     }

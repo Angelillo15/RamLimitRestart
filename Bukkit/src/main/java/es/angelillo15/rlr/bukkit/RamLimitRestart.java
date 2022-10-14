@@ -6,6 +6,7 @@ import es.angelillo15.rlr.api.bukkit.events.LimitReachedEvent;
 import es.angelillo15.rlr.bukkit.commands.MainCommand;
 import es.angelillo15.rlr.bukkit.config.ConfigLoader;
 import es.angelillo15.rlr.bukkit.listener.LimitListener;
+import es.angelillo15.rlr.bukkit.utils.AutoUpdater;
 import es.angelillo15.rlr.bukkit.utils.Queries;
 import es.angelillo15.rlr.bukkit.utils.logger.RDebugLogger;
 import es.angelillo15.rlr.bukkit.utils.logger.RLogger;
@@ -50,6 +51,17 @@ public class RamLimitRestart extends JavaPlugin implements RLRPlugin  {
                     .replace("%memory_max%", String.valueOf(maxMemory))
             );
         }, 0L, getConfig().getLong("Config.check-interval") * 20L);
+    }
+
+    public void autoUpdater(){
+        AutoUpdater updater = new AutoUpdater(98166);
+        updater.checkForUpdates();
+        if(updater.hasUpdate()){
+            RamLimitRestart.getPluginLogger().info(ChatColor.translateAlternateColorCodes('&', ConfigLoader.getConfig().getString("Messages.update-message"))
+                    .replace("%current_version%", updater.getCurrentVersion())
+                    .replace("%new_version%", updater.getSpigotVersion())
+            );
+        }
     }
 
     public void registerCommands(){

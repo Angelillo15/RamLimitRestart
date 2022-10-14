@@ -15,6 +15,10 @@ dependencies {
     compileOnly("org.spigotmc:spigot-api:1.13-R0.1-SNAPSHOT")
 }
 
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
+}
+
 java {
     withJavadocJar()
 }

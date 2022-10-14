@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "es.angelillo15"
-version = "2.0.0"
+version = "2.1"
 
 tasks.shadowJar {
     archiveFileName.set("RamLimitRestart.jar")
@@ -28,6 +28,10 @@ dependencies {
     implementation("com.mashape.unirest:unirest-java:1.4.9")
     implementation("org.xeustechnologies:jcl-core:2.8")
     implementation("com.google.code.gson:gson:2.9.0")
+}
+
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
 }
 
 java {
