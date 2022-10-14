@@ -1,6 +1,6 @@
 main: es.angelillo15.rlr.bukkit.RamLimitRestartLoader
 name: RamLimitRestart
-version: $version
+version: ${version}
 author: Angelillo15
 description: Restart the server when the ram limit is reached
 website: https://angelillo15.es

@@ -22,7 +22,7 @@ dependencies {
 }
 
 tasks.processResources {
-    filesMatching("spigot.yml") {
+    filesMatching("plugin.yml") {
         expand("version" to (parent?.version ?: project.version))
     }
 }
