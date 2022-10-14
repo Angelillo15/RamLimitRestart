@@ -9,14 +9,13 @@ import java.util.ArrayList;
 
 public class CommandOnLimitReachedEvent extends Event implements Cancellable {
     private static final HandlerList HANDLERS = new HandlerList();
-    private final Player player;
     private boolean cancelled;
     private final String command;
 
-    public CommandOnLimitReachedEvent(Player player, String command) {
-        this.player = player;
+    public CommandOnLimitReachedEvent(String command) {
         this.command = command;
     }
+
 
     @Override
     public boolean isCancelled() {

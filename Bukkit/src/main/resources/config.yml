@@ -24,6 +24,7 @@ Config:
     - "bc Ram limit reached, restarting the server..."
     - "restart"
   check-interval: 5 # in seconds
+  delay: 5 # time that the plugin waits before execute the commands | in seconds 0 to disable
   debug: false # Enable debug mode
 
   # Pterodactyl configuration section
