@@ -2,8 +2,7 @@ package es.angelillo15.rlr.bukkit;
 
 import es.angelillo15.rlr.api.ILogger;
 import es.angelillo15.rlr.api.RLRPlugin;
-import es.angelillo15.rlr.api.events.CommandOnLimitReachedEvent;
-import es.angelillo15.rlr.api.events.LimitReachedEvent;
+import es.angelillo15.rlr.api.bukkit.events.LimitReachedEvent;
 import es.angelillo15.rlr.bukkit.config.ConfigLoader;
 import es.angelillo15.rlr.bukkit.utils.Queries;
 import es.angelillo15.rlr.bukkit.utils.logger.RDebugLogger;
@@ -12,8 +11,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
-
-import java.util.List;
 
 public class RamLimitRestart extends JavaPlugin implements RLRPlugin  {
     private boolean debug = false;

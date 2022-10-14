@@ -1,7 +1,7 @@
 package es.angelillo15.rlr.bukkit.listener;
 
-import es.angelillo15.rlr.api.events.CommandOnLimitReachedEvent;
-import es.angelillo15.rlr.api.events.LimitReachedEvent;
+import es.angelillo15.rlr.api.bukkit.events.CommandOnLimitReachedEvent;
+import es.angelillo15.rlr.api.bukkit.events.LimitReachedEvent;
 import es.angelillo15.rlr.bukkit.RamLimitRestart;
 import es.angelillo15.rlr.bukkit.config.ConfigLoader;
 import org.bukkit.Bukkit;

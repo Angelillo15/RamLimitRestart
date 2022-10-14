@@ -1,12 +1,17 @@
-package es.angelillo15.rlr.api.events;
+package es.angelillo15.rlr.api.bukkit.events;
 
-import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-import java.util.ArrayList;
-
+/**
+ * This event would be fired when the limit is reached and a command is executed
+ * <p>
+ * This event has a method to get the command and another to cancel the execution
+ * of the command
+ * @see CommandOnLimitReachedEvent#getCommand()
+ * @see CommandOnLimitReachedEvent#setCancelled(boolean)
+ */
 public class CommandOnLimitReachedEvent extends Event implements Cancellable {
     private static final HandlerList HANDLERS = new HandlerList();
     private boolean cancelled;

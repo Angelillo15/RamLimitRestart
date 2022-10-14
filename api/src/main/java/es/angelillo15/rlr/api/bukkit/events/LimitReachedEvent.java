@@ -1,4 +1,4 @@
-package es.angelillo15.rlr.api.events;
+package es.angelillo15.rlr.api.bukkit.events;
 
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
