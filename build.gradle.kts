@@ -47,16 +47,4 @@ subprojects {
     tasks.withType<JavaCompile> {
         options.encoding = "UTF-8"
     }
-
-    publishing {
-        publications {
-            create<MavenPublication>("maven") {
-                groupId = "es.angelillo15"
-                artifactId = "RamLimitRestart"
-                version = this.version
-
-                from(components["java"])
-            }
-        }
-    }
 }

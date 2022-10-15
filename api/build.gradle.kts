@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("com.github.johnrengelman.shadow") version "4.0.4"
 }
 
 group = "es.angelillo15.rlr.api"
@@ -23,3 +24,14 @@ java {
     withJavadocJar()
 }
 
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "es.angelillo15"
+            artifactId = "RamLimitRestart"
+            version = parent?.version.toString()
+
+            from(components["java"])
+        }
+    }
+}
