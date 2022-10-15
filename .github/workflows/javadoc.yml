@@ -51,6 +51,6 @@ jobs:
           cd ..
           cd ..
           ls
-          rm -r javadocs/javadocs/ram-limit-restart/*
+          rm -r RamLimitRestart/javadocs/javadocs/ram-limit-restart/*
           cp -r api/build/libs/javadoc/* javadocs/javadocs/ram-limit-restart/*
           ls javadocs/javadocs/ram-limit-restart
