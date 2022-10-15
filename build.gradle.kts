@@ -39,19 +39,24 @@ tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "es.angelillo15"
-            artifactId = "RamLimitRestart"
-            version = this.version
+subprojects {
+    apply(plugin = "java")
+    apply(plugin = "maven-publish")
+    apply(plugin = "com.github.johnrengelman.shadow")
 
-            from(components["java"])
+    tasks.withType<JavaCompile> {
+        options.encoding = "UTF-8"
+    }
+
+    publishing {
+        publications {
+            create<MavenPublication>("maven") {
+                groupId = "es.angelillo15"
+                artifactId = "RamLimitRestart"
+                version = this.version
+
+                from(components["java"])
+            }
         }
     }
 }
-
-java {
-    withJavadocJar()
-}
-
