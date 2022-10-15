@@ -45,17 +45,7 @@ jobs:
           cd api
           cd build
           cd libs
-          ls
           unzip api-javadoc.jar -d ./javadoc
-          ls
-          cd javadoc
-          ls
-      - name: unzip javadoc
-        uses: montudor/action-zip@v1
-        with:
-          args:  -d ram-limit-restart
-      - name: list files
-        run: |
-          ls -la
-          ls -la ram-limit-restart
-          ls -la javadocs
+          rm ../../../../javadocs/ram-limit-restart/*
+          cp -r javadoc/* ../../../../javadocs/ram-limit-restart/
+          ls ../../../../javadocs/ram-limit-restart/
