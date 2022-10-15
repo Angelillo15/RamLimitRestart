@@ -37,6 +37,16 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew api:javadocJar
+      - name: clone JavaDoc
+        run: |
           cd ..
-          ls
-
+          git clone https://github.com/Angelillo15/javadocs.git
+      - name: unzip javadoc
+        uses: montudor/action-zip@v1
+        with:
+          args: unzip -qq RamLimitRestart/api/build/api-javadoc.jar -d ram-limit-restart
+      - name: list files
+        run: |
+          ls -la
+          ls -la ram-limit-restart
+          ls -la javadocs
