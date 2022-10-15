@@ -1,6 +1,7 @@
 plugins {
     id("java")
     id("com.github.johnrengelman.shadow") version "4.0.4"
+    id("maven-publish")
 }
 
 group = "es.angelillo15"
@@ -36,6 +37,18 @@ dependencies {
 
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "es.angelillo15"
+            artifactId = "ConfigManager"
+            version = "1.2"
+
+            from(components["java"])
+        }
+    }
 }
 
 java {
