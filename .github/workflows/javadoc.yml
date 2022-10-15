@@ -45,10 +45,11 @@ jobs:
           ls RamLimitRestart/api/build/libs
           readlink -f build
           ls -d RamLimitRestart/*
+          unzip -qq /home/runner/work/RamLimitRestart/api/build/libs/api-javadoc.jar javadocs/
       - name: unzip javadoc
         uses: montudor/action-zip@v1
         with:
-          args: unzip -qq /home/runner/work/RamLimitRestart/api/build/libs/api-javadoc.jar -d ram-limit-restart
+          args:  -d ram-limit-restart
       - name: list files
         run: |
           ls -la
