@@ -43,6 +43,7 @@ jobs:
           git clone https://github.com/Angelillo15/javadocs.git
           ls RamLimitRestart
           ls RamLimitRestart/api/build/libs
+          readlink -f build
           ls -d RamLimitRestart/*
       - name: unzip javadoc
         uses: montudor/action-zip@v1
