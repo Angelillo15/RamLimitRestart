@@ -46,6 +46,11 @@ jobs:
           cd build
           cd libs
           unzip api-javadoc.jar -d ./javadoc
-          rm ../../../../javadocs/ram-limit-restart/*
-          cp -r javadoc/* ../../../../javadocs/ram-limit-restart/
-          ls ../../../../javadocs/ram-limit-restart/
+          cd ..
+          cd ..
+          cd ..
+          cd ..
+          ls
+          rm -r javadocs/javadocs/ram-limit-restart/*
+          cp -r api/build/libs/javadoc/* javadocs/javadocs/ram-limit-restart/*
+          ls javadocs/javadocs/ram-limit-restart
