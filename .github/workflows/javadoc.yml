@@ -41,11 +41,15 @@ jobs:
         run: |
           cd ..
           git clone https://github.com/Angelillo15/javadocs.git
-          ls RamLimitRestart
-          ls RamLimitRestart/api/build/libs
-          readlink -f build
-          ls -d RamLimitRestart/*
-          unzip /home/runner/work/RamLimitRestart/api/build/libs/api-javadoc.jar javadocs/
+          cd RamLimitRestart
+          cd api
+          cd build
+          cd libs
+          ls
+          unzip api-javadoc.jar -d ./javadoc
+          ls
+          cd javadoc
+          ls
       - name: unzip javadoc
         uses: montudor/action-zip@v1
         with:
