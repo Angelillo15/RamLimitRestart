@@ -43,8 +43,8 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             groupId = "es.angelillo15"
-            artifactId = "ConfigManager"
-            version = "1.2"
+            artifactId = "RamLimitRestart"
+            version = this.version
 
             from(components["java"])
         }
