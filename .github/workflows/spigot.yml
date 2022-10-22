@@ -29,10 +29,10 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: Execute Build
-        run: |
-          chmod +x gradlew
-          ./gradlew shadowJar
-          mkdir staging && cp build/libs/*.jar staging
+      run: |
+        chmod +x gradlew
+        ./gradlew shadowJar
+        mkdir staging && cp build/libs/*.jar staging
       - name: Upload the jar
         uses: actions/upload-artifact@v2
         with:
