@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "es.angelillo15"
-version = "2.1.1"
+version = "2.1.2"
 tasks.shadowJar {
     archiveFileName.set("RamLimitRestart.jar")
     relocate("org.simpleyaml", "es.angelillo15.minearte.libs.simpleyaml")
@@ -14,7 +14,6 @@ tasks.shadowJar {
     relocate("es.angelillo15.minearte", "es.angelillo15.minearte.libs.minearte")
     relocate("com.google.gson", "es.angelillo15.minearte.libs.google.gson")
     relocate("com.mashape.unirest", "es.angelillo15.minearte.libs.mashape.unirest")
-    relocate("org", "es.angelillo15.minearte.libs.org")
     relocate("net.sf", "es.angelillo15.minearte.libs.net.sf")
     relocate("mozilla", "es.angelillo15.minearte.libs.mozilla")
 }
