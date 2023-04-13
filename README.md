@@ -16,6 +16,7 @@ Maven:
     <groupId>com.github.Angelillo15</groupId>
     <artifactId>RamLimitRestart</artifactId>
     <version>-SNAPSHOT</version>
+    <scope>provided</scope>
 </dependency>
 ```
 
@@ -26,7 +27,7 @@ repositories {
 }
 
 dependencies {
-     implementation 'com.github.Angelillo15:RamLimitRestart:-SNAPSHOT'
+     compileOnly 'com.github.Angelillo15:RamLimitRestart:-SNAPSHOT'
 }
 ```
 
