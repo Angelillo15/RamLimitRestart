@@ -38,7 +38,7 @@ repositories {
 }
 
 dependencies {
-     implementation("com.github.Angelillo15:RamLimitRestart:-SNAPSHOT")
+     compileOnly("com.github.Angelillo15:RamLimitRestart:-SNAPSHOT")
 }
 ```
 
